@@ -64,7 +64,7 @@ module.exports = {
       indicators.add('rsi', 'rsi', undefined, { length: 14 });
       indicators.add('cci', 'cci', undefined, { length: 20 });
       indicators.add('ao', 'ao');
-      indicators.add('macd', 'macd', undefined, { fast_length: 12, slow_length: 26, signal_length: 9 });
+      indicators.add('macd', 'macd', undefined, { fast_length: 13, slow_length: 34, signal_length: 9 });
       indicators.add('mfi', 'mfi', undefined, { length: 14 });
       indicators.add('bollinger_bands', 'bb', undefined, { length: 20, stddev: 2 });
       indicators.add('stoch_rsi', 'stoch_rsi', undefined, { rsi_length: 14, stoch_length: 14, k: 3, d: 3 });
