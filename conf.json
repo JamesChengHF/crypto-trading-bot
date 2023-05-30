@@ -100,261 +100,45 @@
           "height":400,
           "pairs":[
             {
-                "symbol": "binance:KLAYUSDT"
+              "symbol":"bitmex:XBTUSD"
             },
             {
-                "symbol": "binance:KNCUSDT"
+              "symbol":"bitmex:ETHUSD"
             },
             {
-                "symbol": "binance:KSMUSDT"
+              "symbol":"binance:LTCUSDT"
             },
             {
-                "symbol": "binance:LDOUSDT"
+              "symbol":"binance:EOSUSDT"
             },
             {
-                "symbol": "binance:LEVERUSDT"
+              "symbol":"binance:XRPUSDT"
             },
             {
-                "symbol": "binance:LINAUSDT"
+              "symbol":"binance:NEOUSDT"
             },
             {
-                "symbol": "binance:LINKUSDT"
+              "symbol":"binance:BCHUSDT"
             },
             {
-                "symbol": "binance:LITUSDT"
+              "symbol":"binance:ETCUSDT"
             },
             {
-                "symbol": "binance:LPTUSDT"
+              "symbol":"binance:ADAUSDT"
             },
             {
-                "symbol": "binance:LQTYUSDT"
+              "symbol":"binance:TRXUSDT"
             },
             {
-                "symbol": "binance:LRCUSDT"
+              "symbol":"binance:LINKUSDT"
             },
             {
-                "symbol": "binance:LTCUSDT"
+              "symbol":"binance:BNBUSDT"
             },
             {
-                "symbol": "binance:LUNA2USDT"
-            },
-            {
-                "symbol": "binance:MAGICUSDT"
-            },
-            {
-                "symbol": "binance:MANAUSDT"
-            },
-            {
-                "symbol": "binance:MASKUSDT"
-            },
-            {
-                "symbol": "binance:MATICUSDT"
-            },
-            {
-                "symbol": "binance:MINAUSDT"
-            },
-            {
-                "symbol": "binance:MKRUSDT"
-            },
-            {
-                "symbol": "binance:MTLUSDT"
-            },
-            {
-                "symbol": "binance:NEARUSDT"
-            },
-            {
-                "symbol": "binance:NEOUSDT"
-            },
-            {
-                "symbol": "binance:NKNUSDT"
-            },
-            {
-                "symbol": "binance:OCEANUSDT"
-            },
-            {
-                "symbol": "binance:OGNUSDT"
-            },
-            {
-                "symbol": "binance:OMGUSDT"
-            },
-            {
-                "symbol": "binance:ONEUSDT"
-            },
-            {
-                "symbol": "binance:ONTUSDT"
-            },
-            {
-                "symbol": "binance:OPUSDT"
-            },
-            {
-                "symbol": "binance:PEOPLEUSDT"
-            },
-            {
-                "symbol": "binance:PERPUSDT"
-            },
-            {
-                "symbol": "binance:PHBUSDT"
-            },
-            {
-                "symbol": "binance:QNTUSDT"
-            },
-            {
-                "symbol": "binance:QTUMUSDT"
-            },
-            {
-                "symbol": "binance:RADUSDT"
-            },
-            {
-                "symbol": "binance:RAYUSDT"
-            },
-            {
-                "symbol": "binance:RDNTUSDT"
-            },
-            {
-                "symbol": "binance:REEFUSDT"
-            },
-            {
-                "symbol": "binance:RENUSDT"
-            },
-            {
-                "symbol": "binance:RLCUSDT"
-            },
-            {
-                "symbol": "binance:RNDRUSDT"
-            },
-            {
-                "symbol": "binance:ROSEUSDT"
-            },
-            {
-                "symbol": "binance:RSRUSDT"
-            },
-            {
-                "symbol": "binance:RUNEUSDT"
-            },
-            {
-                "symbol": "binance:RVNUSDT"
-            },
-            {
-                "symbol": "binance:SANDUSDT"
-            },
-            {
-                "symbol": "binance:SCUSDT"
-            },
-            {
-                "symbol": "binance:SFPUSDT"
-            },
-            {
-                "symbol": "binance:SKLUSDT"
-            },
-            {
-                "symbol": "binance:SNXUSDT"
-            },
-            {
-                "symbol": "binance:SOLUSDT"
-            },
-            {
-                "symbol": "binance:SPELLUSDT"
-            },
-            {
-                "symbol": "binance:SRMUSDT"
-            },
-            {
-                "symbol": "binance:SSVUSDT"
-            },
-            {
-                "symbol": "binance:STGUSDT"
-            },
-            {
-                "symbol": "binance:STMXUSDT"
-            },
-            {
-                "symbol": "binance:STORJUSDT"
-            },
-            {
-                "symbol": "binance:STXUSDT"
-            },
-            {
-                "symbol": "binance:SUIUSDT"
-            },
-            {
-                "symbol": "binance:SUSHIUSDT"
-            },
-            {
-                "symbol": "binance:SXPUSDT"
-            },
-            {
-                "symbol": "binance:THETAUSDT"
-            },
-            {
-                "symbol": "binance:TLMUSDT"
-            },
-            {
-                "symbol": "binance:TOMOUSDT"
-            },
-            {
-                "symbol": "binance:TRUUSDT"
-            },
-            {
-                "symbol": "binance:TRXUSDT"
-            },
-            {
-                "symbol": "binance:TUSDT"
-            },
-            {
-                "symbol": "binance:UMAUSDT"
-            },
-            {
-                "symbol": "binance:UNFIUSDT"
-            },
-            {
-                "symbol": "binance:UNIUSDT"
-            },
-            {
-                "symbol": "binance:USDCUSDT"
-            },
-            {
-                "symbol": "binance:VETUSDT"
-            },
-            {
-                "symbol": "binance:WAVESUSDT"
-            },
-            {
-                "symbol": "binance:WOOUSDT"
-            },
-            {
-                "symbol": "binance:XEMUSDT"
-            },
-            {
-                "symbol": "binance:XLMUSDT"
-            },
-            {
-                "symbol": "binance:XMRUSDT"
-            },
-            {
-                "symbol": "binance:XRPUSDT"
-            },
-            {
-                "symbol": "binance:XTZUSDT"
-            },
-            {
-                "symbol": "binance:XVSUSDT"
-            },
-            {
-                "symbol": "binance:YFIUSDT"
-            },
-            {
-                "symbol": "binance:ZECUSDT"
-            },
-            {
-                "symbol": "binance:ZENUSDT"
-            },
-            {
-                "symbol": "binance:ZILUSDT"
-            },
-            {
-                "symbol": "binance:ZRXUSDT"
+              "symbol":"binance:DASHUSDT"
             }
-        ]
+          ]
         },
         {
             "name":"Stock",
