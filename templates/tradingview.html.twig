@@ -56,11 +56,9 @@
             "timezone": Intl.DateTimeFormat().resolvedOptions().timeZone,
             "studies": [
                 "BB@tv-basicstudies",
-                "CCI@tv-basicstudies",
                 "MACD@tv-basicstudies",
                 "MAExp@tv-basicstudies",
-                "RSI@tv-basicstudies",
-                "StochasticRSI@tv-basicstudies"
+                "RSI@tv-basicstudies"
             ],
         }
     );
@@ -80,11 +78,37 @@
             "timezone": Intl.DateTimeFormat().resolvedOptions().timeZone,
             "studies": [
                 "BB@tv-basicstudies",
-                "CCI@tv-basicstudies",
-                "MACD@tv-basicstudies",
-                "MAExp@tv-basicstudies",
-                "RSI@tv-basicstudies",
-                "StochasticRSI@tv-basicstudies"
+                {
+                    id:"MACD@tv-basicstudies",
+                    inputs: {
+                        length: [13,34,9]
+                      },
+                },
+                {
+                    id:"MAExp@tv-basicstudies",
+                    inputs: {
+                        length: 32
+                      },
+                },
+                {
+                    id:"MAExp@tv-basicstudies",
+                    inputs: {
+                        length: 68
+                      },
+                },
+                {
+                    id:"MAExp@tv-basicstudies",
+                    inputs: {
+                        length: 144
+                      },
+                },
+                {
+                    id:"MAExp@tv-basicstudies",
+                    inputs: {
+                        length: 169
+                      },
+                },
+                "RSI@tv-basicstudies"
             ],
         }
     );
