@@ -57,8 +57,8 @@ module.exports = {
     return new Promise(resolve => {
 
       const indicators = new IndicatorBuilder();
-      indicators.add('ema_32', 'ema', undefined, { length: 32 });
       indicators.add('ema_68', 'ema', undefined, { length: 68 });
+      indicators.add('ema_32', 'ema', undefined, { length: 32 });
       indicators.add('ema_144', 'ema', undefined, { length: 144 });
       indicators.add('ema_169', 'ema', undefined, { length: 169 });
       indicators.add('rsi', 'rsi', undefined, { length: 14 });
