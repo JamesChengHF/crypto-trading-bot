@@ -53,8 +53,8 @@ const RequestClient = require('../utils/request_client');
 const Throttler = require('../utils/throttler');
 const Queue = require('../utils/queue');
 
-const Bitmex = require('../exchange/bitmex');
-const BitmexTestnet = require('../exchange/bitmex_testnet');
+//const Bitmex = require('../exchange/bitmex');
+//const BitmexTestnet = require('../exchange/bitmex_testnet');
 const Binance = require('../exchange/binance');
 const BinanceMargin = require('../exchange/binance_margin');
 const BinanceFutures = require('../exchange/binance_futures');
