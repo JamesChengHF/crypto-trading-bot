@@ -4,10 +4,6 @@
             "key": null,
             "secret": null
         },
-        "bitmex": {
-            "key": null,
-            "secret": null
-        },
         "binance": {
             "key": null,
             "secret": null
@@ -99,12 +95,6 @@
           ],
           "height":400,
           "pairs":[
-            {
-              "symbol":"bitmex:XBTUSD"
-            },
-            {
-              "symbol":"bitmex:ETHUSD"
-            },
             {
               "symbol":"binance:LTCUSDT"
             },
