@@ -141,8 +141,8 @@ module.exports = class Ta {
                     ) * 100
                   : null;
             } else if (
-              key == 'ema_200' ||
-              key == 'ema_55' ||
+              key == 'ema_144' ||
+              key == 'ema_169' ||
               key == 'cci' ||
               key == 'rsi' ||
               key == 'ao' ||
