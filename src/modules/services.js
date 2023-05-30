@@ -616,22 +616,22 @@ module.exports = {
     }
 
     return (exchanges = [
-      new Bitmex(
-        this.getEventEmitter(),
-        this.getRequestClient(),
-        this.getCandlestickResample(),
-        this.getLogger(),
-        this.getQueue(),
-        this.getCandleImporter()
-      ),
-      new BitmexTestnet(
-        this.getEventEmitter(),
-        this.getRequestClient(),
-        this.getCandlestickResample(),
-        this.getLogger(),
-        this.getQueue(),
-        this.getCandleImporter()
-      ),
+      // new Bitmex(
+      //   this.getEventEmitter(),
+      //   this.getRequestClient(),
+      //   this.getCandlestickResample(),
+      //   this.getLogger(),
+      //   this.getQueue(),
+      //   this.getCandleImporter()
+      // ),
+      // new BitmexTestnet(
+      //   this.getEventEmitter(),
+      //   this.getRequestClient(),
+      //   this.getCandlestickResample(),
+      //   this.getLogger(),
+      //   this.getQueue(),
+      //   this.getCandleImporter()
+      // ),
       new Binance(
         this.getEventEmitter(),
         this.getLogger(),
