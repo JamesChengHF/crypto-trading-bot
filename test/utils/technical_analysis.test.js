@@ -10,11 +10,11 @@ describe('#technical_analysis for candles', () => {
   it('technical_analysis for candles are returned', async () => {
     const result = await ta.getPredefinedIndicators(createCandleFixtures().reverse());
 
-    assert.equal(result.ema_55.length, 490);
-    assert.equal(result.sma_200.length, 291);
+    assert.equal(result.ema_144.length, 490);
+    assert.equal(result.ema_68.length, 291);
 
-    assert.equal(8145, Math.round(result.ema_55[0]));
-    assert.equal(7994, Math.round(result.sma_200[0]));
+    assert.equal(8145, Math.round(result.ema_144[0]));
+    assert.equal(7994, Math.round(result.ema_68[0]));
   });
 
   it('technical_analysis for options are created', async () => {
@@ -23,16 +23,16 @@ describe('#technical_analysis for candles', () => {
     const result = await ta.createIndicatorsLookback(lookbacks, [
       {
         indicator: 'ema',
-        key: 'ema_55',
+        key: 'ema_144',
         options: {
-          length: 55
+          length: 144
         }
       },
       {
-        indicator: 'sma',
-        key: 'sma_200',
+        indicator: 'ema',
+        key: 'ema_68',
         options: {
-          length: 200
+          length: 68
         }
       },
       {
@@ -186,8 +186,8 @@ describe('#technical_analysis for candles', () => {
       }
     ]);
 
-    assert.equal(result.ema_55.length, 490);
-    assert.equal(result.sma_200.length, 291);
+    assert.equal(result.ema_144.length, 490);
+    assert.equal(result.ema_68.length, 291);
 
     assert.equal(result.wma.length > 0, true);
     assert.equal(result.dema.length > 0, true);
@@ -201,8 +201,8 @@ describe('#technical_analysis for candles', () => {
     assert.equal(typeof result.rsi[0], 'number');
     assert.equal(typeof result.mfi[0], 'number');
 
-    assert.equal(8145, Math.round(result.ema_55[0]));
-    assert.equal(7994, Math.round(result.sma_200[0]));
+    assert.equal(8145, Math.round(result.ema_144[0]));
+    assert.equal(7994, Math.round(result.ema_68[0]));
     assert.equal(0.31, parseFloat(result.macd[1].histogram).toFixed(2));
 
     assert.equal(-12689695, parseFloat(result.obv[1]));
