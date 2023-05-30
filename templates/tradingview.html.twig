@@ -54,12 +54,53 @@
             "allow_symbol_change": true,
             "container_id": "tradingview",
             "timezone": Intl.DateTimeFormat().resolvedOptions().timeZone,
-            "studies": [
-                "BB@tv-basicstudies",
-                "MACD@tv-basicstudies",
-                "MAExp@tv-basicstudies",
-                "RSI@tv-basicstudies"
-            ],
+            "studies": [   {
+                "id": "MAExp@tv-basicstudies",
+                "version": 60,
+                "inputs": {
+                  "length": 32
+                }
+              } ,{
+                "id": "MAExp@tv-basicstudies",
+                "version": 60,
+                "inputs": {
+                  "length": 68
+                }
+              },{
+                "id": "MAExp@tv-basicstudies",
+                "version": 60,
+                "inputs": {
+                  "length": 144
+                }
+              } ,{
+                "id": "MAExp@tv-basicstudies",
+                "version": 60,
+                "inputs": {
+                  "length": 169
+                }
+              },{
+                "id": "MACD@tv-basicstudies",
+                "version": 60,
+                "inputs": {
+                  "fast length": 13,
+                  "slow length":34
+                },
+                "style":{
+                  "macd":0,
+                  "signal":false
+                }
+              },{
+                "id":"RSI@tv-basicstudies",
+                "style":{
+                  "upper band":80,
+                  "lower band":20
+                }
+              }
+                        ],
+             "studies_overrides":{
+                "relative strength index.upper band.value": 80,
+                "relative strength index.lower band.value": 20,
+             }
         }
     );
 
@@ -76,40 +117,53 @@
             "allow_symbol_change": true,
             "container_id": "tradingview_2",
             "timezone": Intl.DateTimeFormat().resolvedOptions().timeZone,
-            "studies": [
-                "BB@tv-basicstudies",
-                {
-                    id:"MACD@tv-basicstudies",
-                    inputs: {
-                        length: [13,34,9]
-                      },
+            "studies": [   {
+                "id": "MAExp@tv-basicstudies",
+                "version": 60,
+                "inputs": {
+                  "length": 32
+                }
+              } ,{
+                "id": "MAExp@tv-basicstudies",
+                "version": 60,
+                "inputs": {
+                  "length": 68
+                }
+              },{
+                "id": "MAExp@tv-basicstudies",
+                "version": 60,
+                "inputs": {
+                  "length": 144
+                }
+              } ,{
+                "id": "MAExp@tv-basicstudies",
+                "version": 60,
+                "inputs": {
+                  "length": 169
+                }
+              },{
+                "id": "MACD@tv-basicstudies",
+                "version": 60,
+                "inputs": {
+                  "fast length": 13,
+                  "slow length":34
                 },
-                {
-                    id:"MAExp@tv-basicstudies",
-                    inputs: {
-                        length: 32
-                      },
-                },
-                {
-                    id:"MAExp@tv-basicstudies",
-                    inputs: {
-                        length: 68
-                      },
-                },
-                {
-                    id:"MAExp@tv-basicstudies",
-                    inputs: {
-                        length: 144
-                      },
-                },
-                {
-                    id:"MAExp@tv-basicstudies",
-                    inputs: {
-                        length: 169
-                      },
-                },
-                "RSI@tv-basicstudies"
-            ],
+                "style":{
+                  "macd":0,
+                  "signal":false
+                }
+              },{
+                "id":"RSI@tv-basicstudies",
+                "style":{
+                  "upper band":80,
+                  "lower band":20
+                }
+              }
+                        ],
+             "studies_overrides":{
+                "relative strength index.upper band.value": 80,
+                "relative strength index.lower band.value": 20,
+             }
         }
     );
 </script>
