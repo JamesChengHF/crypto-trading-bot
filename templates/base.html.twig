@@ -39,7 +39,8 @@
                                         <th scope="col" style="border-top-width: 1px">24h</th>
 
                                         {% for period in periods %}
-                                            <th class="text-uppercase" scope="col" data-toggle="tooltip" title="Trend Direction (ema 55 / ema 200)">T</th>
+                                            <th class="text-uppercase" scope="col" data-toggle="tooltip" title="Trend Direction (ema 32 / ema 68)">T32/68</th>
+                                            <th class="text-uppercase" scope="col" data-toggle="tooltip" title="Trend Direction (ema 144 / ema 169)">T144、169</th>
                                             <th class="text-uppercase" scope="col">e32/68</th>
                                             <th class="text-uppercase" scope="col">e144/169</th>
                                             <th class="text-uppercase" scope="col">rsi</th>
@@ -63,7 +64,9 @@
 
                                             {% for period in periods %}
                                                 {% set ta = row.ta[period] %}
+                                                <td class="period-start {{ ta.ema_32.value > ta.ema_68.value ? 'text-success' : 'text-danger' }}"><i class="fas {{ ta.ema_32.value > ta.ema_68.value ? 'fa-arrow-alt-circle-up' : 'fa-arrow-alt-circle-down' }}"></i></td>
                                                 <td class="period-start {{ ta.ema_144.value > ta.ema_169.value ? 'text-success' : 'text-danger' }}"><i class="fas {{ ta.ema_144.value > ta.ema_169.value ? 'fa-arrow-alt-circle-up' : 'fa-arrow-alt-circle-down' }}"></i></td>
+                                                
                                                 <td>
                                                     <span data-toggle="tooltip" title="{{ ta.ema_68.value|price_format }}" class="{{ row.ticker.bid > ta.ema_68.value ? 'text-success' : 'text-danger' }}"><i class="fas {{ row.ticker.bid > ta.ema_68.value ? 'fa-arrow-up' : 'fa-arrow-down' }}"></i></span>
                                                     <span data-toggle="tooltip" title="{{ ta.ema_32.value|price_format }}"  class="{{ row.ticker.bid > ta.ema_32.value ? 'text-success' : 'text-danger' }}"><i class="fas {{ row.ticker.bid > ta.ema_32.value ? 'fa-arrow-up' : 'fa-arrow-down' }}" style="font-size:0.65em"></i></span>
