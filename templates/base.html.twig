@@ -44,11 +44,7 @@
                                             <th class="text-uppercase" scope="col">e32/68</th>
                                             <th class="text-uppercase" scope="col">e144/169</th>
                                             <th class="text-uppercase" scope="col">rsi</th>
-                                            <th class="text-uppercase" scope="col">cci</th>
-                                            <th class="text-uppercase" scope="col">srsi</th>
-                                            <th class="text-uppercase" scope="col">ao</th>
                                             <th class="text-uppercase" scope="col">macd</th>
-                                            <th class="text-uppercase" scope="col">mfi</th>
                                             <th class="text-uppercase" scope="col">bb</th>
                                         {% endfor %}
                                     </tr>
@@ -82,33 +78,12 @@
                                                     {% if ta.rsi.value > 30 and ta.rsi.value < 50 %}text-warning{% endif %}
                                                     {% if ta.rsi.value > 50 and ta.rsi.value < 70 %}text-orange{% endif %}
                                                 ">{{ ta.rsi.value|round(0) }}</td>
-                                                                                    <td class="
-                                                    {% if ta.cci.value >= 250 or ta.cci.value <= -250 %}font-weight-bold {% endif %}
-                                                    {% if ta.cci.value <= -100 %}text-success{% endif %}
-                                                    {% if ta.cci.value >= 100 %}text-danger{% endif %}
-                                                    {% if ta.cci.value > -100 and ta.rsi.value < 100 %}text-warning{% endif %}
-                                                ">{{ ta.cci.value|round(0) }}</td>
-                                                <td>
-                                                    {% if ta.stoch_rsi.value.stoch_k >= 80 and ta.stoch_rsi.value.stoch_d >= 80 %}
-                                                        <i data-toggle="tooltip" title="{{ ta.stoch_rsi.value.stoch_k|round(2) }}" class="far fa-circle text-danger"></i>
-                                                    {% elseif ta.stoch_rsi.value.stoch_k <= 20 and ta.stoch_rsi.value.stoch_d <= 20 %}
-                                                        <i data-toggle="tooltip" title="{{ ta.stoch_rsi.value.stoch_k|round(2) }}" class="far fa-circle text-success"></i>
-                                                    {% else %}
-                                                        <i data-toggle="tooltip" title="{{ ta.stoch_rsi.value.stoch_k|round(2) }}" class="far fa-arrow-alt-circle-up {{ ta.stoch_rsi.value.stoch_k >= ta.stoch_rsi.value.stoch_d ? 'trend-up text-success' : 'trend-down text-danger' }}"></i>
-                                                    {% endif %}
-                                                </td>
-                                                <td class="{{ ta.ao.value > 0 ? 'text-success' : 'text-danger' }}">
-                                                    <i data-toggle="tooltip" title="{{ ta.ao.crossed }}m ago" class="fas fa-arrow-up {{ ta.ao.trend == 'up' ? 'trend-up' : 'trend-down' }} {% if (ta.ao.value > 0 and ta.ao.trend == 'down') or (ta.ao.value < 0 and ta.ao.trend == 'up') %}font-weight-bold{% endif %} {% if ta.ao.crossed_index < 5 %}blink{% endif %}"></i>
-                                                </td>
+
                                                 <td class="{{ ta.macd.value.histogram > 0 ? 'text-success' : 'text-danger' }}">
                                                     <i data-toggle="tooltip" title="{{ ta.macd.crossed }}m ago" class="far fa-arrow-alt-circle-up {{ ta.macd.trend == 'up' ? 'trend-up' : 'trend-down' }} {% if (ta.macd.value.histogram > 0 and ta.macd.trend == 'down') or (ta.macd.value.histogram < 0 and ta.macd.trend == 'up') %}font-weight-bold{% endif %} {% if ta.macd.crossed_index < 5 %}blink{% endif %}"></i>
                                                 </td>
-                                                <td class="
-                                                    {% if ta.mfi.value <= 20 %}text-success{% endif %}
-                                                    {% if ta.mfi.value >= 80 %}text-danger{% endif %}
-                                                    {% if ta.mfi.value > 20 and ta.rsi.value < 80 %}text-warning{% endif %}
-                                                ">{{ ta.mfi.value|round(0) }}</td>
-                                                                                    <td style="white-space: nowrap" class="
+
+                                                <td style="white-space: nowrap" class="
                                                     {% if ta.bollinger_bands.percent >= 95 or ta.bollinger_bands.percent <= 5 %}font-weight-bold {% endif %}
                                                     {% if ta.bollinger_bands.percent <= 5 %}text-success{% endif %}
                                                     {% if ta.bollinger_bands.percent >= 95 %}text-danger{% endif %}
