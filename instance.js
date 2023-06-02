@@ -230,23 +230,14 @@ let z = ['BTCUSDT', 'ETHUSDT', 'BCHUSDT', 'XRPUSDT', 'EOSUSDT', 'LTCUSDT', 'TRXU
 z.forEach((pair) => {
     c.symbols.push({
         'symbol': pair,
-        'periods': ['1m', '15m', '1h'],
+        'periods': ['15m', '1h'],
         'exchange': 'binance',
         'state': 'watch',
         'strategies': [
             {
-                'strategy': 'cci',
-                'options': {
-                    'period': '15m'
-                }
-            },
-            {
-                'strategy': 'obv_pump_dump'
-            },
-            {
                 'strategy': 'macd',
                 'options': {
-                    'period': '1h'
+                    'period': '15m'
                 }
             }
         ]

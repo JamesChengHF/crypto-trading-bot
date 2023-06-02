@@ -1,7 +1,7 @@
 const moment = require('moment');
 const crypto = require('crypto');
 const os = require('os');
-const PositionStateChangeEvent = require('../event/position_state_change_event');
+//const PositionStateChangeEvent = require('../event/position_state_change_event');
 
 module.exports = class Trade {
   constructor(
@@ -83,9 +83,9 @@ module.exports = class Trade {
         eventEmitter.emit('watchdog', {});
       }, this.systemUtil.getConfig('tick.watchdog', 30800));
 
-      setInterval(() => {
-        eventEmitter.emit('tick_ordering', {});
-      }, this.systemUtil.getConfig('tick.ordering', 10800));
+      // setInterval(() => {
+      //   eventEmitter.emit('tick_ordering', {});
+      // }, this.systemUtil.getConfig('tick.ordering', 10800));
     }, this.systemUtil.getConfig('tick.warmup', 30000));
 
     // cronjob like tasks
@@ -103,11 +103,11 @@ module.exports = class Trade {
       me.tickerDatabaseListener.onTicker(tickerEvent);
     });
 
-    eventEmitter.on('orderbook', function(orderbookEvent) {
-      // console.log(orderbookEvent.orderbook)
-    });
+    // eventEmitter.on('orderbook', function(orderbookEvent) {
+    //   // console.log(orderbookEvent.orderbook)
+    // });
 
-    eventEmitter.on('order', async event => me.createOrderListener.onCreateOrder(event));
+//    eventEmitter.on('order', async event => me.createOrderListener.onCreateOrder(event));
 
     eventEmitter.on('tick', async () => {
       me.tickListener.onTick();
@@ -118,8 +118,8 @@ module.exports = class Trade {
       await me.exchangePositionWatcher.onPositionStateChangeTick();
     });
 
-    eventEmitter.on(PositionStateChangeEvent.EVENT_NAME, async event => {
-      await me.exchangeOrderWatchdogListener.onPositionChanged(event);
-    });
+    // eventEmitter.on(PositionStateChangeEvent.EVENT_NAME, async event => {
+    //   await me.exchangeOrderWatchdogListener.onPositionChanged(event);
+    // });
   }
 };
